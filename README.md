@@ -7,3 +7,5 @@ E possível ver o resultado dos desafios abrindo index (deixarei um link para vi
 o resultado do desafio vem do console log do qual esse vem dos 4 arquivos dentro da pasta JS
 
 Muito obrigado!!
+
+link para visualzar a pagina diretamente: https://thiago-engenheiro.github.io/Desafio-Target/
