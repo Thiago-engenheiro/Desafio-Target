@@ -8,4 +8,4 @@ o resultado do desafio vem do console log do qual esse vem dos 4 arquivos dentro
 
 Muito obrigado!!
 
-link para visualzar a pagina diretamente: https://thiago-engenheiro.github.io/Desafio-Target/
+link para visualizar a pagina diretamente: https://thiago-engenheiro.github.io/Desafio-Target/
