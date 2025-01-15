@@ -30,22 +30,17 @@ const dados = [
     { "dia": 29, "valor": 13220.495 },
     { "dia": 30, "valor": 8414.61 }
   ];
-
-  function calcularMediaFaturamento(dados) {
-    let somaFaturamento = 0; 
-    let diasComFaturamento = 0; 
-
-   
-    for (let i = 0; i < dados.length; i++) {
-        if (dados[i].valor > 0) { 
-            somaFaturamento += dados[i].valor;
-            diasComFaturamento++; 
-        }
-    }
-
-    const mediaFaturamento = somaFaturamento / diasComFaturamento;
-
-    return mediaFaturamento.toFixed(2); 
-}
-
-console.log("Média de faturamento diário:", calcularMediaFaturamento(dados));
+  
+  const diasComFaturamento = dados.filter(d => d.valor > 0);
+  
+  const menorValor = Math.min(...diasComFaturamento.map(d => d.valor));
+  const maiorValor = Math.max(...diasComFaturamento.map(d => d.valor));
+  
+  const somaFaturamento = diasComFaturamento.reduce((acc, d) => acc + d.valor, 0);
+  const mediaMensal = somaFaturamento / diasComFaturamento.length;
+  
+  const diasAcimaDaMedia = diasComFaturamento.filter(d => d.valor > mediaMensal).length;
+  
+  console.log("Menor valor de faturamento:", menorValor.toFixed(2));
+  console.log("Maior valor de faturamento:", maiorValor.toFixed(2));
+  console.log("Número de dias com faturamento acima da média:", diasAcimaDaMedia);
